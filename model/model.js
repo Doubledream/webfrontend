@@ -11,13 +11,15 @@ window.onload = function(){
 	function showModel(){
 		var model = getElement('model');
 		getElement('mask').style.display = 'block';
-		model.style.display = 'block';
-		model.style.transition = 'all 2s';
+		model.style.opacity = 1;
+		model.style.transition = 'opacity 0.5s';
 	}
 	//关闭model
 	function closeModel(){
+		var model = getElement('model');
 		getElement('mask').style.display = 'none';
-		getElement('model').style.display = 'none';
+		model.style.opacity = 0;
+		model.style.transition = 'opacity 0.5s';
 	}
 }
 //获取对象
