@@ -1,4 +1,8 @@
 window.onload = function(){
+	// 日历
+	Calendar.init();
+	Calendar.setCalendar();
+	// 时钟
 	var clock = document.getElementById('clock');
 	var context = clock.getContext("2d");
 	var canWidth = clock.offsetWidth;
