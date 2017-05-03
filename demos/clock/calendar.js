@@ -6,6 +6,12 @@ calendar.prototype.init = function(year, month){
 	var today = new Date();
 	this.year = year || today.getFullYear();
 	this.month = month || today.getMonth() + 1;
+	var tds = document.getElementsByTagName('td');
+	var len = tds.length;
+	for (var i = 0; i < len; i++){
+		tds[i].innerHTML = '';
+		removeClass(tds[i], 'current');
+	}
 };
 calendar.prototype.setCalendar = function(){
 	var today = new Date();
@@ -42,12 +48,17 @@ calendar.prototype.setCalendar = function(){
   	addClass(tds[markDay + firstDay - 1], 'current');
   }
 };
-function addClass(el, name){
-	if (el.className) {
-		el.className += ' ' + name;
-	}else {
-		el.className = name;
-	}
+function hasClass(el, cls) {
+   return el.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+}
+function addClass(el, cls) {
+   if (!this.hasClass(el, cls)) el.className += ' ' + cls;
+}
+function removeClass(el, cls) {
+  if (hasClass(el, cls)) {
+    var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+    el.className = el.className.replace(reg, ' ');
+  }
 }
 function runNian(year){
 	if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)){

@@ -2,23 +2,30 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>h5实现钟表</title>
+	<title>百度测评(日历)&ampcanvas绘制时钟</title>
 	<link rel="stylesheet" type="text/css" href="clock.css">
 </head>
 <body>
-	<table>
-    <thead>
-        <tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr>
-    </thead>
-    <tbody>
-        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    </tbody>
-	</table>
+	<div class="calendar-container">
+		<div class="calendar-header">
+			<span class="arrow left-arrow" id="previous-month"></span>
+			<span class="date-show" id="date-show"></span>
+			<span class="arrow right-arrow" id="next-month"></span>
+		</div>
+		<table>
+	    <thead>
+	        <tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr>
+	    </thead>
+	    <tbody>
+	        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	    </tbody>
+		</table>
+	</div>
 	<div id="clock-container">
 		<canvas id="clock" width="200" height="200"></canvas>
 	</div>
