@@ -47,3 +47,22 @@ The input is assumed to be a 32-bit signed integer. Your function should **retur
 	    return (tmp < INT_MIN || tmp > INT_MAX) ? 0 : tmp;
 	  }
 	};
+## 3.Palindrome Number
+### Description:
+Determine whether an integer is a palindrome. Do this **without extra space**.
+### Example:
+	Example1: x = -1, return false
+	Example2: x = 12321, return true
+### Solution(by **C++**)
+	class Solution {
+	public:
+    bool isPalindrome(int x) {
+      if (x < 0 || (x != 0 && x % 10 == 0)) return false;
+      int tmp = 0;
+      while (x > tmp) {
+        tmp = tmp * 10 + x % 10;
+        x /= 10;
+      }
+      return x == tmp || x == tmp / 10;
+    }
+	};
