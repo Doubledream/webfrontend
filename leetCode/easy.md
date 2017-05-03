@@ -9,7 +9,7 @@ You may assume that each input would have exactly one solution, and you may not 
 
 	Because nums[0] + nums[1] = 2 + 7 = 9,
 	return [0, 1].
-### Solution(by **javascript**)
+### Solution (by **javascript**)
 	/**
 	 * @param {number[]} nums
 	 * @param {number} target
@@ -35,7 +35,7 @@ Reverse digits of an integer.
 	Example2: x = -123, return -321
 ### Note:
 The input is assumed to be a 32-bit signed integer. Your function should **return 0 when the reversed integer overflows**.
-### Solution(by **C++**)
+### Solution (by **C++**)
 	class Solution {
 	public:
 	  int reverse(int x) {
@@ -46,4 +46,54 @@ The input is assumed to be a 32-bit signed integer. Your function should **retur
 	    }
 	    return (tmp < INT_MIN || tmp > INT_MAX) ? 0 : tmp;
 	  }
+	};
+## 3.Palindrome Number
+### Description:
+Determine whether an integer is a palindrome. Do this **without extra space**.
+### Example:
+	Example1: x = -1, return false
+	Example2: x = 12321, return true
+### Solution (by **C++**)
+	class Solution {
+	public:
+	    bool isPalindrome(int x) {
+	        if (x < 0 || (x != 0 && x % 10 == 0)) return false;
+	        int tmp = 0;
+	        while (x > tmp) {
+	            tmp = tmp * 10 + x % 10;
+	            x /= 10;
+	        }
+	        return x == tmp || x == tmp / 10;
+	    }
+	};
+## 4.Roman to Integer
+### Description:
+Given a roman numeral, convert it to an integer.  
+Input is guaranteed to be within the range from 1 to 3999.
+### Solution (by **javascript**)
+	/**
+	 * @param {string} s
+	 * @return {number}
+	 */
+	var romanToInt = function(s) {
+	    var list = {
+	        'I': 1,
+	        'V': 5,
+	        'X': 10,
+	        'L': 50,
+	        'C': 100,
+	        'D': 500,
+	        'M': 1000
+	    };
+	    var n = s.length;
+	    var ss = s.concat(s[n-1]);
+	    var res = 0;
+	    for (var i = 0; i < n; i++){
+	        if (list[ss[i]] >= list[ss[i+1]]) {
+	            res += list[ss[i]];
+	        } else {
+	            res -= list[ss[i]];
+	        }
+	    }
+	    return res;
 	};
