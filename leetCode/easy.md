@@ -66,3 +66,34 @@ Determine whether an integer is a palindrome. Do this **without extra space**.
 	        return x == tmp || x == tmp / 10;
 	    }
 	};
+## 4.Roman to Integer
+### Description:
+Given a roman numeral, convert it to an integer.  
+Input is guaranteed to be within the range from 1 to 3999.
+### Solution(by **javascript**)
+	/**
+	 * @param {string} s
+	 * @return {number}
+	 */
+	var romanToInt = function(s) {
+	    var list = {
+	        'I': 1,
+	        'V': 5,
+	        'X': 10,
+	        'L': 50,
+	        'C': 100,
+	        'D': 500,
+	        'M': 1000
+	    };
+	    var n = s.length;
+	    var ss = s.concat(s[n-1]);
+	    var res = 0;
+	    for (var i = 0; i < n; i++){
+	        if (list[ss[i]] >= list[ss[i+1]]) {
+	            res += list[ss[i]];
+	        } else {
+	            res -= list[ss[i]];
+	        }
+	    }
+	    return res;
+	};
