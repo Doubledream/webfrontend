@@ -2,6 +2,7 @@ window.onload = function(){
 	// 日历
 	Calendar.init();
 	Calendar.setCalendar();
+	getDate();
 	// 时钟
 	var clock = document.getElementById('clock');
 	var context = clock.getContext("2d");
@@ -22,6 +23,39 @@ window.onload = function(){
 		angM = angM === 2 * Math.PI ? 0 : angM + 1 / (30 * 60) * Math.PI;
 		angS = angS === 2 * Math.PI ? 0 : angS + 1 / 30 * Math.PI;
 	}, 1000);
+}
+// 日历显示
+function getDate(){
+	var date = document.getElementById('date-show');
+	var today = new Date();
+	var year = today.getFullYear();
+	var month = today.getMonth() + 1;
+	date.innerHTML = year + '年' + month + '月';
+	// 前一月、下一月实现
+	var previousMonth = document.getElementById('previous-month');
+	var nextMonth = document.getElementById('next-month');
+	EventHandle(previousMonth, 'click', function(){
+		if (month <= 1){
+			year --;
+			month = 12;
+		} else {
+			month --;
+		}
+		date.innerHTML = year + '年' + month + '月';
+		Calendar.init(year, month);
+		Calendar.setCalendar();
+	});
+	EventHandle(nextMonth, 'click', function(){
+		if (month >= 12){
+			year ++;
+			month = 1;
+		} else {
+			month ++;
+		}
+		date.innerHTML = year + '年' + month + '月';
+		Calendar.init(year, month);
+		Calendar.setCalendar();
+	});
 }
 // 获取当前时间
 function getTime(){
@@ -73,4 +107,14 @@ function drawClock(context, angH, angM, angS){
 	// 描绘路径
 	context.stroke();
 	fillNum(context);
+}
+// 注册事件
+function EventHandle(el, type, handler){
+	if (el.addEventListener){
+		el.addEventListener(type, handler, false);
+	} else if (el.attachEvent){
+		el.attachEvent('on' + type, handler);
+	} else {
+		el['on' + type] = handler;
+	}
 }

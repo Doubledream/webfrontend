@@ -4,10 +4,49 @@ body,html{
 	font-size: 14px;
 	color:#000;
 }
-table{
+.calendar-container{
+	width: 40%;
+	margin: 50px auto;
+}
+.calendar-container table{
 	border-collapse: collapse;
 	width: 100%;
 	table-layout: fixed;
+}
+.calendar-header{
+	display: flex;
+	display: -webkit-flex;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 32px;
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+}
+.calendar-header .arrow{
+	display: inline-block;
+	flex: 0, 0, 32px;
+}
+.left-arrow, .right-arrow{
+	width: 0;
+	height: 0;
+	font-size: 0;
+	border: 16px solid transparent;
+}
+.right-arrow{
+	border-left-color: #ccc;
+}
+.right-arrow:hover{
+	border-left-color: #999;
+}
+.left-arrow{
+	border-right-color: #ccc;
+}
+.left-arrow:hover{
+	border-right-color: #999;
+}
+.calendar-header .date-show{
+	flex: 1;
+	text-align: center;
 }
 td,th{
 	border: 1px solid #e1e1e1;
@@ -15,7 +54,9 @@ td,th{
 	line-height: 20px;
 	text-align: center;
 }
-.current{color:red;}
+.current{
+	color:red;
+}
 #clock-container{
 	display: block;
 	width: 200px;
