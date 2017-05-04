@@ -32,9 +32,9 @@
 但是可能存在一些问题：  
 + 在这段代码中，赋给 i 的值不是实际的数字，而是字符串“0”、“1”、“2”...这样在进行字符串计算的时候就会带来不便，例如：
 
-![example1](https://github.com/Doubledream/webfrontend/blob/gh-pages/blog/ES6/images/example1.png) 
+<img src="images/example1.png" width = "385" height = "113" alt="example1"/>
 
 + for-in 循环体除了遍历数组元素外，还会遍历自定义属性，例如：
 
-![example2](https://github.com/Doubledream/webfrontend/blob/gh-pages/blog/ES6/images/example1.png) 
+<img src="images/example2.png" width = "380" height = "170" alt="example1"/>
 
