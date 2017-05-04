@@ -27,6 +27,7 @@ You may assume that each input would have exactly one solution, and you may not 
 	    }
 	  }
 	};
+
 ## 2.Reverse Integer
 ### Description:
 Reverse digits of an integer.
@@ -47,6 +48,7 @@ The input is assumed to be a 32-bit signed integer. Your function should **retur
 	    return (tmp < INT_MIN || tmp > INT_MAX) ? 0 : tmp;
 	  }
 	};
+
 ## 3.Palindrome Number
 ### Description:
 Determine whether an integer is a palindrome. Do this **without extra space**.
@@ -66,6 +68,7 @@ Determine whether an integer is a palindrome. Do this **without extra space**.
 	        return x == tmp || x == tmp / 10;
 	    }
 	};
+
 ## 4.Roman to Integer
 ### Description:
 Given a roman numeral, convert it to an integer.  
@@ -96,4 +99,35 @@ Input is guaranteed to be within the range from 1 to 3999.
 	        }
 	    }
 	    return res;
+	};
+
+## 5.Merge Two Sorted Lists
+### Description:
+Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+### Solution (by **C++**)
+	/**
+	 * Definition for singly-linked list.
+	 * struct ListNode {
+	 *     int val;
+	 *     ListNode *next;
+	 *     ListNode(int x) : val(x), next(NULL) {}
+	 * };
+	 */
+	class Solution {
+	public:
+	    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+	        if (l1 == NULL)
+	            return l2;
+	        else if (l2 == NULL)
+	            return l1;
+	        ListNode* ml = NULL;
+	        if (l1->val < l2->val) {
+	            ml = l1;
+	            ml->next = mergeTwoLists(l1->next, l2);
+	        } else {
+	            ml = l2;
+	            ml->next = mergeTwoLists(l1, l2->next);
+	        }
+	        return ml;
+	    }
 	};
