@@ -1,5 +1,14 @@
 # leetCode (easy集合)
-## 1.Two Sum
+
+## 目录 ##
+> #### Two Sum ####
+> #### Reverse Integer ####
+> #### Palindrome Number ####
+> #### Roman to Integer ####
+> #### Merge Two Sorted Lists ####
+> #### Longest Common Prefix ####
+
+## 1.Two Sum ##
 ### Description:
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
@@ -28,7 +37,7 @@ You may assume that each input would have exactly one solution, and you may not 
 	  }
 	};
 
-## 2.Reverse Integer
+## 2.Reverse Integer ##
 ### Description:
 Reverse digits of an integer.
 ### Example:
@@ -49,7 +58,7 @@ The input is assumed to be a 32-bit signed integer. Your function should **retur
 	  }
 	};
 
-## 3.Palindrome Number
+## 3.Palindrome Number ##
 ### Description:
 Determine whether an integer is a palindrome. Do this **without extra space**.
 ### Example:
@@ -69,7 +78,7 @@ Determine whether an integer is a palindrome. Do this **without extra space**.
 	    }
 	};
 
-## 4.Roman to Integer
+## 4.Roman to Integer ##
 ### Description:
 Given a roman numeral, convert it to an integer.  
 Input is guaranteed to be within the range from 1 to 3999.
@@ -101,7 +110,7 @@ Input is guaranteed to be within the range from 1 to 3999.
 	    return res;
 	};
 
-## 5.Merge Two Sorted Lists
+## 5.Merge Two Sorted Lists ##
 ### Description:
 Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
 ### Solution (by **C++**)
@@ -132,7 +141,7 @@ Merge two sorted linked lists and return it as a new list. The new list should b
 	    }
 	};
 
-## 6.Longest Common Prefix
+## 6.Longest Common Prefix ##
 ### Description:
 Write a function to find the longest common prefix string amongst an array of strings.
 ### Solution (by **C++**)
