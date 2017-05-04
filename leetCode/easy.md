@@ -131,3 +131,19 @@ Merge two sorted linked lists and return it as a new list. The new list should b
 	        return ml;
 	    }
 	};
+
+## 6.Longest Common Prefix
+### Description:
+Write a function to find the longest common prefix string amongst an array of strings.
+### Solution (by **C++**)
+	class Solution {
+	public:
+	    string longestCommonPrefix(vector<string>& strs) {
+	        string prefix = "";
+	        for(int idx=0; strs.size()>0; prefix+=strs[0][idx], idx++)
+	            for(int i=0; i<strs.size(); i++)
+	                if(idx >= strs[i].size() ||(i > 0 && strs[i][idx] != strs[i-1][idx]))
+	                    return prefix;
+	        return prefix;
+	    }
+	};
