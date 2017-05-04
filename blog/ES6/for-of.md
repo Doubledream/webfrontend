@@ -36,5 +36,5 @@
 
 + for-in 循环体除了遍历数组元素外，还会遍历自定义属性，例如：
 
-![example2](https://github.com/Doubledream/webfrontend/blob/gh-pages/blog/ES6/images/example2.png) 
+![example2](https://github.com/Doubledream/webfrontend/blob/gh-pages/blog/ES6/images/example1.png) 
 
