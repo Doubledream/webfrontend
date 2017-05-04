@@ -1,9 +1,10 @@
+
 # 迭代器和 for-of 循环 #
 > 原文出处：http://www.kancloud.cn/kancloud/es6-in-depth/45514
 
 ## 主要内容 ##
-#### 强大的 for-of 循环 ####
-#### for-of 循环遍历其它的集合 ####
+> #### 强大的 for-of 循环 ####
+> #### for-of 循环遍历其它的集合 ####
 
 ## 正文 ##
 ### 1. 强大的 for-of 循环 ###
@@ -30,3 +31,10 @@
 
 但是可能存在一些问题：  
 + 在这段代码中，赋给 i 的值不是实际的数字，而是字符串“0”、“1”、“2”...这样在进行字符串计算的时候就会带来不便，例如：
+
+![example1](https://github.com/Doubledream/webfrontend/blob/gh-pages/blog/ES6/images/example1.png) 
+
++ for-in 循环体除了遍历数组元素外，还会遍历自定义属性，例如：
+
+![example2](https://github.com/Doubledream/webfrontend/blob/gh-pages/blog/ES6/images/example2.png) 
+
