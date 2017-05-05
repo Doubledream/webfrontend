@@ -162,8 +162,8 @@ Write a function to find the longest common prefix string amongst an array of st
 ### Description:
 Given a string containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.
 ### Example:
-	Example1: `'()'` and `'()[]{}'`, return true
-	Example2: `'(]'` and `'([)]'`, return false
+Example1: `'()'` and `'()[]{}'`, return true  
+Example2: `'(]'` and `'([)]'`, return false
 ### Solution (by **C++**)
 	class Solution {
 	public:
