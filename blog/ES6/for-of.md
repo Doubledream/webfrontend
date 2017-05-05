@@ -3,8 +3,8 @@
 > 原文出处：http://www.kancloud.cn/kancloud/es6-in-depth/45514
 
 ## 主要内容 ##
-> <a href="#for-of">强大的 for-of 循环</a>  
-> <a href="#others">for-of 循环遍历其它的集合</a>
++ <a href="#for-of" style="text-decoration:none">强大的 for-of 循环</a>  
++ <a href="#others" style="text-decoration:none">for-of 循环遍历其它的集合</a>
 
 ## 正文 ##
 ### 1. 强大的 for-of 循环 <a name="for-of"/>
