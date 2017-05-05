@@ -3,11 +3,11 @@
 > 原文出处：http://www.kancloud.cn/kancloud/es6-in-depth/45514
 
 ## 主要内容 ##
-> #### 强大的 for-of 循环 ####
-> #### for-of 循环遍历其它的集合 ####
+> <a href="#for-of">强大的 for-of 循环</a>
+> <a href="#others">for-of 循环遍历其它的集合</a>
 
 ## 正文 ##
-### 1. 强大的 for-of 循环 ###
+### 1. 强大的 for-of 循环 <a name="for-of"/>
 
 我们如何遍历数组中的元素？最原始的实现数组遍历的方式：  
 
@@ -48,7 +48,7 @@
 + 这个方法避开了 for-in 循环的所有缺陷
 + 与 forEach() 不同的是，它可以正确响应 break、continue 和 return 语句
 
-### 2. for-of 循环遍历其它的集合 ###
+### 2. for-of 循环遍历其它的集合<a name="others"/> ###
 
 
 
