@@ -7,6 +7,7 @@
 + <a href="#Roman-to-Integer" style="text-decoration:none">Roman to Integer</a>  
 + <a href="#Merge-Two-Sorted-Lists" style="text-decoration:none">Merge Two Sorted Lists</a>  
 + <a href="#Longest-Common-Prefix" style="text-decoration:none">Longest Common Prefix</a>  
++ <a href="#Valid-Parentheses" style="text-decoration:none">Valid Parentheses</a>  
 
 ## 1.Two Sum <a name="Two-Sum"/>
 ### Description:
@@ -78,7 +79,7 @@ Determine whether an integer is a palindrome. Do this **without extra space**.
 	    }
 	};
 
-## 4.Roman to Integer ##<a name="Roman-to-Integer"/>
+## 4.Roman to Integer <a name="Roman-to-Integer"/>
 ### Description:
 Given a roman numeral, convert it to an integer.  
 Input is guaranteed to be within the range from 1 to 3999.
@@ -154,5 +155,30 @@ Write a function to find the longest common prefix string amongst an array of st
 	                if(idx >= strs[i].size() ||(i > 0 && strs[i][idx] != strs[i-1][idx]))
 	                    return prefix;
 	        return prefix;
+	    }
+	};
+
+## 7.Valid Parentheses <a name="Valid-Parentheses"/>
+### Description:
+Given a string containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.
+### Example:
+Example1: `'()'` and `'()[]{}'`, return true  
+Example2: `'(]'` and `'([)]'`, return false
+### Solution (by **C++**)
+	class Solution {
+	public:
+	    bool isValid(string s) {
+	        stack<char> sta;
+	        for (char& c : s) {
+	            switch (c) {
+	                case '(':
+	                case '[':
+	                case '{': sta.push(c); break;
+	                case ')': if (sta.empty() || sta.top()!='(') return false; else sta.pop(); break;
+	                case ']': if (sta.empty() || sta.top()!='[') return false; else sta.pop(); break;
+	                case '}': if (sta.empty() || sta.top()!='{') return false; else sta.pop(); break;
+	            }
+	        }
+	        return sta.empty();
 	    }
 	};
