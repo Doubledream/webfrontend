@@ -3,7 +3,7 @@
 > 原文出处：http://www.kancloud.cn/kancloud/es6-in-depth/45514
 
 ## 主要内容 ##
-> <a href="#for-of">强大的 for-of 循环</a>
+> <a href="#for-of">强大的 for-of 循环</a>  
 > <a href="#others">for-of 循环遍历其它的集合</a>
 
 ## 正文 ##
