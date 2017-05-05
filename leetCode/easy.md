@@ -79,7 +79,7 @@ Determine whether an integer is a palindrome. Do this **without extra space**.
 	    }
 	};
 
-## 4.Roman to Integer ##<a name="Roman-to-Integer"/>
+## 4.Roman to Integer <a name="Roman-to-Integer"/>
 ### Description:
 Given a roman numeral, convert it to an integer.  
 Input is guaranteed to be within the range from 1 to 3999.
