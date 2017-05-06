@@ -8,6 +8,7 @@
 + <a href="#Merge-Two-Sorted-Lists" style="text-decoration:none">Merge Two Sorted Lists</a>  
 + <a href="#Longest-Common-Prefix" style="text-decoration:none">Longest Common Prefix</a>  
 + <a href="#Valid-Parentheses" style="text-decoration:none">Valid Parentheses</a>  
++ <a href="#Count-and-Say" style="text-decoration:none">Count and Say</a>  
 
 ## 1.Two Sum <a name="Two-Sum"/>
 ### Description:
@@ -181,4 +182,39 @@ Example2: `'(]'` and `'([)]'`, return false
 	        }
 	        return sta.empty();
 	    }
+	};
+
+## 8.Count and Say <a name="Count-and-Say"/>
+### Description:
+The count-and-say sequence is the sequence of integers beginning as follows:  
+`1, 11, 21, 1211, 111221, ...`  
+
+`1` is read off as `"one 1"` or `11`.  
+`11` is read off as `"two 1s"` or `21`.  
+`21` is read off as `"one 2`, then `one 1"` or `1211`.
+Given an integer n, generate the nth sequence.
+### Note:
+The sequence of integers will be represented as a string.
+### Solution (by **javascript**)
+	/**
+	 * @param {number} n
+	 * @return {string}
+	 */
+	var countAndSay = function(n) {
+	    if(n === 0)
+	        return '';
+	    var str = '1';
+	    for (var i = 2; i <= n; i++){
+	        var res = '';
+	        for (var j = 0; j < str.length; j++){
+	            var count = 1;
+	            while ((str[j] === str[j+1]) && (j < str.length - 1)) {
+	                count ++;
+	                j ++;
+	            }
+	            res += count + str[j];
+	        }
+	        str = res;
+	    }
+	    return str;
 	};
