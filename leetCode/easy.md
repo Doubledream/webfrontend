@@ -9,6 +9,7 @@
 + <a href="#Longest-Common-Prefix" style="text-decoration:none">Longest Common Prefix</a>  
 + <a href="#Valid-Parentheses" style="text-decoration:none">Valid Parentheses</a>  
 + <a href="#Count-and-Say" style="text-decoration:none">Count and Say</a>  
++ <a href="#Maximum-Subarray" style="text-decoration:none">Maximum Subarray</a>  
 
 ## 1.Two Sum <a name="Two-Sum"/>
 ### Description:
@@ -217,4 +218,30 @@ The sequence of integers will be represented as a string.
 	        str = res;
 	    }
 	    return str;
+	};
+
+## 9.Maximum Subarray <a name="Maximum-Subarray"/>
+### Description:
+Find the contiguous subarray within an array (containing at least one number) which has the largest sum.
+### Example:
+Example: given the array `[-2,1,-3,4,-1,2,1,-5,4]`,the contiguous subarray `[4,-1,2,1]` has the largest sum = `6`.
+### Solution (by **javascript**)
+	/**
+	 * @param {number[]} nums
+	 * @return {number}
+	 */
+	var maxSubArray = function(nums) {
+	    var max = nums[0] ? nums[0] : 0;
+	    var b = 0;
+	    for (var i = 0; i < nums.length; i++) {
+	        if (b > 0) {
+	            b += nums[i];
+	        } else {
+	            b = nums[i];
+	        }
+	        if (b > max) {
+	            max = b;
+	        }
+	    }
+	    return max;
 	};
