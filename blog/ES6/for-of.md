@@ -60,6 +60,19 @@ for (var chr of 'hello') {
 <img src="images/example3.png" width = "380" height = "100" alt="example3"/>
 
 3) 同样支持Map和Set对象遍历.  
+Set对象可以自动排除重复项：  
+```
+// 基于单词数组创建一个set对象
+var uniqueWords = new Set(words);
+```
+
+生成Set对象后，你可以轻松遍历它所包含的内容：  
+
+<img src="images/example4.png" width = "383" height = "171" alt="example4"/>
+
+Map对象稍有不同：内含的数据由键值对组成，所以你需要使用解构（destructuring）来将键值对拆解为两个独立的变量：  
+example  
+<img src="images/example5.png" width = "410" height = "240" alt="example5"/>
 
 
 
