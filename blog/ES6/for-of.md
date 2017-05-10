@@ -36,7 +36,7 @@
 
 + for-in 循环体除了遍历数组元素外，还会遍历自定义属性，例如：
 
-<img src="images/example2.png" width = "380" height = "170" alt="example1"/>
+<img src="images/example2.png" width = "380" height = "170" alt="example2"/>
 
 因此，标准委员会在ES6中增加了一种新的循环语法来解决目前的问题.如下：  
 
@@ -49,6 +49,17 @@
 + 与 forEach() 不同的是，它可以正确响应 break、continue 和 return 语句
 
 ### 2. for-of 循环遍历其它的集合<a name="others"/> ###
+1) for-of循环不仅支持数组，还支持大多数类数组对象，例如[DOM NodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList)对象。  
+2) for-of循环也支持字符串遍历，它将字符串视为一系列的Unicode字符来进行遍历：  
+```
+for (var chr of 'hello') {
+	console.log(chr);
+}
+```
+
+<img src="images/example3.png" width = "380" height = "100" alt="example3"/>
+
+3) 同样支持Map和Set对象遍历.  
 
 
 
