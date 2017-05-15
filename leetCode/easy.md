@@ -10,6 +10,7 @@
 + <a href="#Valid-Parentheses" style="text-decoration:none">Valid Parentheses</a>  
 + <a href="#Count-and-Say" style="text-decoration:none">Count and Say</a>  
 + <a href="#Maximum-Subarray" style="text-decoration:none">Maximum Subarray</a>  
++ <a href="#Climbing-Stairs" style="text-decoration:none">Climbing Stairs</a>  
 
 ## 1.Two Sum <a name="Two-Sum"/>
 ### Description:
@@ -245,3 +246,23 @@ Example: given the array `[-2,1,-3,4,-1,2,1,-5,4]`,the contiguous subarray `[4,-
 	    }
 	    return max;
 	};
+
+## 10.Climbing Stairs <a name="Climbing-Stairs"/>
+### Description:
+You are climbing a stair case. It takes n steps to reach to the top.  
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+### Note:
+Given n will be a positive integer.
+### Solution (by **javascript**)
+```
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs = function(n) {
+    a = b = 1
+    while (n--)
+        a = (b += a) - a
+    return a
+};
+```
